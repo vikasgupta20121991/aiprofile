@@ -1,7 +1,7 @@
 /*global gettext*/
 'use strict';
 {
-    window.addEventListener('load', function() {
+  window.addEventListener("load", function () {
         // Add anchor tag for Show/Hide link
         const fieldsets = document.querySelectorAll('fieldset.collapse');
         for (const [i, elem] of fieldsets.entries()) {

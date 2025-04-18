@@ -4,7 +4,7 @@
         cache: {},
         init: function(id) {
             const box = document.getElementById(id);
-            SelectBox.cache[id] = [];
+      SelectBox.cache[id] = [];
             const cache = SelectBox.cache[id];
             for (const node of box.options) {
                 cache.push({value: node.value, text: node.text, displayed: 1});
@@ -13,7 +13,7 @@
         redisplay: function(id) {
             // Repopulate HTML select box from cache
             const box = document.getElementById(id);
-            const scroll_value_from_top = box.scrollTop;
+      const scroll_value_from_top = box.scrollTop;
             box.innerHTML = '';
             for (const node of SelectBox.cache[id]) {
                 if (node.displayed) {
@@ -35,7 +35,7 @@
                 for (const token of tokens) {
                     if (!node_text.includes(token)) {
                         node.displayed = 0;
-                        break; // Once the first token isn't found we're done
+            break; // Once the first token isn't found we're done
                     }
                 }
             }
@@ -51,7 +51,7 @@
             for (const [i, node] of cache.entries()) {
                 if (node.value === value) {
                     delete_index = i;
-                    break;
+          break;
                 }
             }
             cache.splice(delete_index, 1);

@@ -42,14 +42,14 @@
         let addButton;
 
         /**
-         * The "Add another MyModel" button below the inline forms.
+     * The "Add another MyModel" button below the inline forms.
          */
         const addInlineAddButton = function() {
             if (addButton === null) {
                 if ($this.prop("tagName") === "TR") {
                     // If forms are laid out as table rows, insert the
                     // "add" button in a new table row:
-                    const numCols = $this.eq(-1).children().length;
+          const numCols = $this.eq(-1).children().length;
                     $parent.append('<tr class="' + options.addCssClass + '"><td colspan="' + numCols + '"><a href="#">' + options.addText + "</a></tr>");
                     addButton = $parent.find("tr:last a");
                 } else {
@@ -62,9 +62,9 @@
         };
 
         const addInlineClickHandler = function(e) {
-            e.preventDefault();
+      e.preventDefault();
             const template = $("#" + options.prefix + "-empty");
-            const row = template.clone(true);
+      const row = template.clone(true);
             row.removeClass(options.emptyCssClass)
                 .addClass(options.formCssClass)
                 .attr("id", options.prefix + "-" + nextIndex);

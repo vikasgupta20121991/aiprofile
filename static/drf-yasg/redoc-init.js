@@ -34,7 +34,7 @@ function camelToKebab(str) {
 }
 
 for (var p in redocSettings) {
-    if (redocSettings.hasOwnProperty(p)) {
+    if (Object.prototype.hasOwnProperty.call(redocSettings, p)) {
         if (redocSettings[p] !== null && redocSettings[p] !== undefined && redocSettings[p] !== false) {
             redoc.setAttribute(camelToKebab(p), redocSettings[p].toString());
         }

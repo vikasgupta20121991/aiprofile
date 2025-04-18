@@ -3,7 +3,7 @@ var insertionQ = (function () {
 
     var sequence = 100,
         isAnimationSupported = false,
-        animation_string = 'animationName',
+    animation_string = "animationName",
         keyframeprefix = '',
         domPrefixes = 'Webkit Moz O ms Khtml'.split(' '),
         pfx = '',
@@ -149,7 +149,7 @@ var insertionQ = (function () {
     //allows overriding defaults
     exports.config = function (opt) {
         for (var o in opt) {
-            if (opt.hasOwnProperty(o)) {
+            if (Object.prototype.hasOwnProperty.call(opt, o)) {
                 options[o] = opt[o];
             }
         }

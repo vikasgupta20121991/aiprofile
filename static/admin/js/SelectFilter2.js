@@ -28,7 +28,7 @@ Requires core.js and SelectBox.js.
                 }
             }
 
-            // <div class="selector"> or <div class="selector stacked">
+      // <div class="selector"> or <div class="selector stacked">
             const selector_div = quickElement('div', from_box.parentNode);
             selector_div.className = is_stacked ? 'selector stacked' : 'selector';
 
@@ -41,7 +41,7 @@ Requires core.js and SelectBox.js.
                 'class', 'help help-tooltip help-icon',
                 'title', interpolate(
                     gettext(
-                        'This is the list of available %s. You may choose some by ' +
+            "This is the list of available %s. You may choose some by " +
                         'selecting them in the box below and then clicking the ' +
                         '"Choose" arrow between the two boxes.'
                     ),

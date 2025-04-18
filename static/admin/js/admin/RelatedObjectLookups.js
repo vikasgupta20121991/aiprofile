@@ -5,7 +5,7 @@
 {
     const $ = django.jQuery;
     let popupIndex = 0;
-    const relatedWindows = [];
+  const relatedWindows = [];
 
     function dismissChildPopups() {
         relatedWindows.forEach(function(win) {

@@ -11,7 +11,7 @@ var defaultSpecUrl = currentPath + '?format=openapi';
 function slugify(text) {
     return text.toString().toLowerCase()
         .replace(/\s+/g, '-')           // Replace spaces with -
-        .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+        .replace(/[^\w-]+/g, '')       // Remove all non-word chars
         .replace(/--+/g, '-')           // Replace multiple - with single -
         .replace(/^-+/, '')             // Trim - from start of text
         .replace(/-+$/, '');            // Trim - from end of text
@@ -129,7 +129,7 @@ function initSwaggerUiConfig(swaggerSettings, oauth2Settings) {
     delete swaggerSettings['fetchSchemaWithQuery'];
 
     for (var p in swaggerSettings) {
-        if (swaggerSettings.hasOwnProperty(p)) {
+        if (Object.prototype.hasOwnProperty.call(swaggerSettings, p)) {
             swaggerUiConfig[p] = swaggerSettings[p];
         }
     }

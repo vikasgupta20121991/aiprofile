@@ -59,7 +59,7 @@ function doAjaxSubmit(e) {
       data = data.replace(/\n/g, '\r\n');
     }
   } else {
-    contentType = form.attr('enctype') || form.attr('encoding')
+    contentType = form.attr("enctype") || form.attr("encoding");
 
     if (contentType === 'multipart/form-data') {
       if (!window.FormData) {

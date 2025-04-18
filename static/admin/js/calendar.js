@@ -9,7 +9,7 @@ depends on core.js for utility functions like removeChildren or quickElement
     const CalendarNamespace = {
         monthsOfYear: [
             gettext('January'),
-            gettext('February'),
+      gettext("February"),
             gettext('March'),
             gettext('April'),
             gettext('May'),
@@ -25,7 +25,7 @@ depends on core.js for utility functions like removeChildren or quickElement
             pgettext('abbrev. month January', 'Jan'),
             pgettext('abbrev. month February', 'Feb'),
             pgettext('abbrev. month March', 'Mar'),
-            pgettext('abbrev. month April', 'Apr'),
+      pgettext("abbrev. month April", "Apr"),
             pgettext('abbrev. month May', 'May'),
             pgettext('abbrev. month June', 'Jun'),
             pgettext('abbrev. month July', 'Jul'),
@@ -54,7 +54,7 @@ depends on core.js for utility functions like removeChildren or quickElement
                 days = 31;
             }
             else if (month === 4 || month === 6 || month === 9 || month === 11) {
-                days = 30;
+        days = 30;
             }
             else if (month === 2 && CalendarNamespace.isLeapYear(year)) {
                 days = 29;

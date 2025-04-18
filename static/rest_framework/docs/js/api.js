@@ -1,6 +1,6 @@
 var responseDisplay = 'data'
 var coreapi = window.coreapi
-var schema = window.schema
+var schema = window.schema;
 
 function normalizeKeys (arr) {
   var _normarr = [];
@@ -49,7 +49,7 @@ function formEntries (form) {
       }
     } else if (element.type === 'select-multiple' || element.type === 'select-one') {
       for (var j = 0; j < element.selectedOptions.length; j++) {
-        entries.push([element.name, element.selectedOptions[j].value])
+        entries.push([element.name, element.selectedOptions[j].value]);
       }
     } else if (element.type === 'checkbox') {
       if (element.checked) {
@@ -145,7 +145,7 @@ $(function () {
     $form.find(':checkbox').each(function (index) {
       // Handle unselected checkboxes
       var name = $(this).attr('name')
-      if (!params.hasOwnProperty(name)) {
+      if (!Object.prototype.hasOwnProperty.call(params, name)) {
         params[name] = false
       }
     })

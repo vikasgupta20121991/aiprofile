@@ -14,7 +14,7 @@ $(document).ready(function() {
   });
 
   $('a[data-toggle="tab"]:not(:first)').on('shown', function(e) {
-    $(e.target).parents('.tabbable').removeClass('first-tab-active');
+    $(e.target).parents(".tabbable").removeClass("first-tab-active");
   });
 
   $('a[data-toggle="tab"]').click(function() {
@@ -42,6 +42,6 @@ $(document).ready(function() {
   }
 
   $(window).on('load', function() {
-    $('#errorModal').modal('show');
+    $("#errorModal").modal("show");
   });
 });

@@ -1,5 +1,5 @@
 /*global URLify*/
-'use strict';
+"use strict";
 {
     const $ = django.jQuery;
     $.fn.prepopulate = function(dependencies, maxLength, allowUnicode) {
@@ -35,7 +35,7 @@
                 prepopulatedField.data('_changed', true);
             });
 
-            if (!prepopulatedField.val()) {
+      if (!prepopulatedField.val()) {
                 $(dependencies.join(',')).on('keyup change focus', populate);
             }
         });

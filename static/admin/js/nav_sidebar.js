@@ -17,7 +17,7 @@
             } else {
                 navSidebarIsOpen = 'true';
             }
-            localStorage.setItem('django.admin.navSidebarIsOpen', navSidebarIsOpen);
+      localStorage.setItem("django.admin.navSidebarIsOpen", navSidebarIsOpen);
             main.classList.toggle('shifted');
             navSidebar.setAttribute('aria-expanded', navSidebarIsOpen);
         });
@@ -30,7 +30,7 @@
             return;
         }
         navSidebar.querySelectorAll('th[scope=row] a').forEach((container) => {
-            options.push({title: container.innerHTML, node: container});
+      options.push({ title: container.innerHTML, node: container });
         });
 
         function checkValue(event) {
@@ -38,7 +38,7 @@
             if (filterValue) {
                 filterValue = filterValue.toLowerCase();
             }
-            if (event.key === 'Escape') {
+      if (event.key === "Escape") {
                 filterValue = '';
                 event.target.value = ''; // clear input
             }

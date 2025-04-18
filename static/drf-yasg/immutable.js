@@ -31,7 +31,7 @@
 
   createClass(IndexedIterable, Iterable);
     function IndexedIterable(value) {
-      return isIndexed(value) ? value : IndexedSeq(value);
+    return isIndexed(value) ? value : IndexedSeq(value);
     }
 
 
@@ -406,7 +406,7 @@
     };
 
     ObjectSeq.prototype.has = function(key) {
-      return this._object.hasOwnProperty(key);
+      return Object.prototype.hasOwnProperty.call(this._object, key);
     };
 
     ObjectSeq.prototype.__iterate = function(fn, reverse) {
