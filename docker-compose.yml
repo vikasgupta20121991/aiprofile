@@ -1,0 +1,18 @@
+services:
+
+  web:
+    build:
+      context: .  
+      dockerfile: Dockerfile 
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:9033"
+    volumes:
+      - .:/app
+    ports:
+      - "9033:9033"
+
+    env_file: 
+      - env/.env.prod
+    # depends_on:
+    #   - db
+
+ 
